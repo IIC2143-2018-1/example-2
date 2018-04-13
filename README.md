@@ -1,24 +1,19 @@
-# README
+# App Ayudantía - Spotify
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Requisitos:
 
-Things you may want to cover:
+* Docker instalado
 
-* Ruby version
+Objetivo:
 
-* System dependencies
+* Desarrollar proyecto guía para enseñar Ruby on Rails
 
-* Configuration
+Versiones:
 
-* Database creation
+* Ruby: 2.5.0
 
-* Database initialization
+* Rails 5.1.5
 
-* How to run the test suite
+* PostgreSQL 0.18
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Rubocop 0.54 
