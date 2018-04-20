@@ -1,2 +1,15 @@
-<h1>Albums#show</h1>
-<p>Find me in app/views/albums/show.html.erb</p>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @album.name %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @album.year %>
+</p>
+
+<%= link_to 'Songs', artist_album_songs_path(@artist, @album) %> |
+<%= link_to 'Edit', edit_artist_album_path(@artist, @album) %> |
+<%= link_to 'Back', artist_albums_path(@artist) %>
