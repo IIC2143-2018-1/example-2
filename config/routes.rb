@@ -1,17 +1,10 @@
 Rails.application.routes.draw do
-  get 'albums/index'
-
-  get 'albums/show'
-
-  get 'albums/new'
-
-  get 'albums/edit'
-
-  get 'albums/update'
-
-  get 'albums/create'
-
-  resources :artists
+  devise_for :users
+  resources :artists do
+    resources :albums do
+      resources :songs
+    end
+  end
 
   root 'artists#index'
 

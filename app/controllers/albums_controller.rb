@@ -18,7 +18,7 @@ class AlbumsController < ApplicationController
 
     respond_to do |format|
       if @album.save
-        format.html { redirect_to artist_albums_path(@artist, @album), notice: 'Album was successfully created.' }
+        format.html { redirect_to artist_album_path(@artist, @album), notice: 'Album was successfully created.' }
         format.json { render :show, status: :created, location: @album }
       else
         format.html { render :new }
