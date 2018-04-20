@@ -1,4 +1,16 @@
 Rails.application.routes.draw do
+  get 'albums/index'
+
+  get 'albums/show'
+
+  get 'albums/new'
+
+  get 'albums/edit'
+
+  get 'albums/update'
+
+  get 'albums/create'
+
   resources :artists
 
   root 'artists#index'
