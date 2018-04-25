@@ -48,3 +48,12 @@ Style/EmptyMethod:
 
 Metrics/LineLength:
   Max: 95
+
+Layout/AlignParameters:
+  Enabled: false
+
+Metrics/MethodLength:
+  Enabled: false
+
+Style/BlockDelimiters:
+  Enabled: false
