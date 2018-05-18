@@ -34,6 +34,8 @@ gem 'devise'
 gem 'bootstrap', '~> 4.1.1'
 # Use JQuery
 gem 'jquery-rails'
+# Use JQuery-Validations
+gem 'jquery-validation-rails'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

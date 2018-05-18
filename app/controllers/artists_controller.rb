@@ -3,6 +3,7 @@ class ArtistsController < ApplicationController
 
   def index
     @artists = Artist.all
+    @artist = Artist.new
   end
 
   def show
@@ -21,6 +22,7 @@ class ArtistsController < ApplicationController
           redirect_to artist_path(@artist),
           notice: 'Artist was successfully created.'
         }
+        format.js
         format.json { render :show, status: :created, location: @artist }
       else
         format.html { render :new }

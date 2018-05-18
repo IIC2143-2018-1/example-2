@@ -2,7 +2,7 @@
 
 <h1>Artists</h1>
 
-<table class="table table-borderless">
+<table class="table">
   <thead>
     <tr>
       <th scope="col">Name</th>
@@ -12,20 +12,13 @@
       <th></th>
     </tr>
   </thead>
-  <tbody>
-    <% @artists.each do |artist| %>
-      <tr>
-        <td><%= artist.name %></td>
-        <td><%= artist.year %></td>
-        <td><%= link_to 'Show', artist %></td>
-        <td><%= link_to 'Edit', edit_artist_path(artist) %></td>
-        <td><%= link_to 'Delete', artist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
+  <tbody id="artists">
+    <%= render @artists %>
   </tbody>
 </table>
 
 <br>
 <% if current_user %>
-  <%= link_to 'New Artist', new_artist_path %>
+  <h2>Create Artist</h2>
+  <%= render 'form', artist: @artist %>
 <% end %>
