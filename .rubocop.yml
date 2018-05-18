@@ -20,6 +20,8 @@ AllCops:
     - 'vendor/**/*'
     - 'tmp/**/*'
     - '.git/**/*'
+    - 'Dockerfile'
+    - 'docker-compose.yml'
 
 Documentation:
   Enabled: false
@@ -47,7 +49,7 @@ Style/EmptyMethod:
   Enabled: false
 
 Metrics/LineLength:
-  Max: 95
+  Enabled: false
 
 Layout/AlignParameters:
   Enabled: false
@@ -56,4 +58,7 @@ Metrics/MethodLength:
   Enabled: false
 
 Style/BlockDelimiters:
+  Enabled: false
+
+Bundler/OrderedGems:
   Enabled: false

@@ -2,11 +2,11 @@
 
 <h1>Artists</h1>
 
-<table>
+<table class="table table-borderless">
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Year</th>
+      <th scope="col">Name</th>
+      <th scope="col">Year</th>
       <th></th>
       <th></th>
       <th></th>
@@ -26,5 +26,6 @@
 </table>
 
 <br>
-
-<%= link_to 'New Artist', new_artist_path %>
+<% if current_user %>
+  <%= link_to 'New Artist', new_artist_path %>
+<% end %>
