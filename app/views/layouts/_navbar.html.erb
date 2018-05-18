@@ -1,0 +1,29 @@
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-primary">
+  <%= link_to 'Spatify', root_path, class: 'navbar-brand' %>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <%= link_to 'Artists', artists_path, class: 'nav-link' %>
+      </li>
+    </ul>
+    <ul class="navbar-nav">
+      <% if current_user %>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <%= current_user.name %>
+          </a>
+          <div class="dropdown-menu mr-auto" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Profile</a>
+            <div class="dropdown-divider"></div>
+            <%= link_to 'Log Out', destroy_user_session_path, class: 'dropdown-item', method: :delete %>
+          </div>
+        </li>
+      <% else %>
+        <%= link_to 'Log In', new_user_session_path, class: 'nav-link' %>
+      <% end %>
+    </ul>
+  </div>
+</nav>
