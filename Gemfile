@@ -46,9 +46,15 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  # Use shoulda matchers
+  gem 'shoulda-matchers', '~> 3.1'
+  # Use rails controller testing
+  gem 'rails-controller-testing'
 end
 
 group :development do
+  # Use Rspec
+  gem 'rspec-rails', '~> 3.7'
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
